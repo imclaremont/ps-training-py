@@ -1,4 +1,6 @@
-## 1주차 자료구조 알고리즘 선정 문제
+# 1주차 알고리즘 선정 문제
+
+## 자료구조
 
 1. [큐2](https://www.acmicpc.net/problem/18258)
 2. [스택](https://www.acmicpc.net/problem/10828)
