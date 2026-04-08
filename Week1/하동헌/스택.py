@@ -1,9 +1,9 @@
 import sys
 
 N = int(sys.stdin.readline())
+
 stack = []
 result = []
-
 for _ in range(N):
     cmd = sys.stdin.readline().split()
 
