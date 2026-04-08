@@ -1,27 +1,23 @@
 import sys
 
 T = int(sys.stdin.readline())
-
-res = []
 for _ in range(T):
-    ps = sys.stdin.readline().strip()
-    
-    cnt = 0
-    is_vps = True
+    str = sys.stdin.readline().strip()
 
-    for ch in ps:
-        if ch == "(":
-            cnt += 1
+    stack = []
+    f = 0
+    for ch in str:
+        if ch == '(':
+            stack.append(ch)
         else:
-            cnt -= 1
-        
-        if cnt < 0:
-            is_vps = False
-            break
-    
-    if cnt == 0 and is_vps:
-        res.append("YES")
-    else:
-        res.append("NO")
+            if stack:
+                stack.pop()
+            else:
+                f = 1
+                break
 
-print("\n".join(res))
+    if not stack and f == 0:
+        print("YES")
+    else:
+        print("NO")
+        
